@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSMutableArray *playerArray;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+-(void)addNewPlayer;
+
 @end

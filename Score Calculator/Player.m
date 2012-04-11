@@ -2,7 +2,7 @@
 //  Player.m
 //  Score Calculator
 //
-//  Created by Song Jeremy on 4/11/12.
+//  Created by Song Jeremy on 4/12/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,5 +13,6 @@
 
 @dynamic name;
 @dynamic score;
+@dynamic seq;
 
 @end

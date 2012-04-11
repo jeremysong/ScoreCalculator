@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB63BBB1535EB40005EFD96 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB63BBA1535EB40005EFD96 /* CustomCell.m */; };
+		3FB63BDA153601C0005EFD96 /* tableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */; };
+		3FB63BDB153601C0005EFD96 /* tableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BD9153601C0005EFD96 /* tableViewCell.png */; };
 		3FDE3DB81535DE70005E4EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DB71535DE70005E4EC3 /* UIKit.framework */; };
 		3FDE3DBA1535DE70005E4EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DB91535DE70005E4EC3 /* Foundation.framework */; };
 		3FDE3DBC1535DE70005E4EC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DBB1535DE70005E4EC3 /* CoreGraphics.framework */; };
@@ -15,21 +18,41 @@
 		3FDE3DC61535DE70005E4EC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DC51535DE70005E4EC3 /* main.m */; };
 		3FDE3DCA1535DE70005E4EC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DC91535DE70005E4EC3 /* AppDelegate.m */; };
 		3FDE3DCD1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DCB1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld */; };
+		3FDE3DDD1535E187005E4EC3 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */; };
+		3FDE3DE01535E1F5005E4EC3 /* CoreDataCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DDF1535E1F5005E4EC3 /* CoreDataCommunicator.m */; };
+		3FDE3DE31535E55C005E4EC3 /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */; };
+		3FDE3DE41535E55C005E4EC3 /* tableViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */; };
+		3FDE3DE71535E5C8005E4EC3 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */; };
+		3FDE3DEA1535E718005E4EC3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE91535E718005E4EC3 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FB63BB91535EB40005EFD96 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		3FB63BBA1535EB40005EFD96 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewCell@2x.png"; sourceTree = "<group>"; };
+		3FB63BD9153601C0005EFD96 /* tableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewCell.png; sourceTree = "<group>"; };
 		3FDE3DB31535DE70005E4EC3 /* Score Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE3DB71535DE70005E4EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FDE3DB91535DE70005E4EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FDE3DBB1535DE70005E4EC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3FDE3DBD1535DE70005E4EC3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3FDE3DC11535DE70005E4EC3 /* Score Calculator-Info.plist */ = {isa = PBXFileReference; path = "Score Calculator-Info.plist"; sourceTree = "<group>"; };
+		3FDE3DC11535DE70005E4EC3 /* Score Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Score Calculator-Info.plist"; sourceTree = "<group>"; };
 		3FDE3DC31535DE70005E4EC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3FDE3DC51535DE70005E4EC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3FDE3DC71535DE70005E4EC3 /* Score Calculator-Prefix.pch */ = {isa = PBXFileReference; path = "Score Calculator-Prefix.pch"; sourceTree = "<group>"; };
-		3FDE3DC81535DE70005E4EC3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FDE3DC71535DE70005E4EC3 /* Score Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Score Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		3FDE3DC81535DE70005E4EC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FDE3DC91535DE70005E4EC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FDE3DCC1535DE70005E4EC3 /* Score_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Score_Calculator.xcdatamodel; sourceTree = "<group>"; };
+		3FDE3DDB1535E187005E4EC3 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
+		3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		3FDE3DDE1535E1F5005E4EC3 /* CoreDataCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataCommunicator.h; sourceTree = "<group>"; };
+		3FDE3DDF1535E1F5005E4EC3 /* CoreDataCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataCommunicator.m; sourceTree = "<group>"; };
+		3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
+		3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBackground@2x.png"; sourceTree = "<group>"; };
+		3FDE3DE51535E5C8005E4EC3 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		3FDE3DE81535E718005E4EC3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3FDE3DE91535E718005E4EC3 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +103,20 @@
 			children = (
 				3FDE3DC81535DE70005E4EC3 /* AppDelegate.h */,
 				3FDE3DC91535DE70005E4EC3 /* AppDelegate.m */,
+				3FDE3DDE1535E1F5005E4EC3 /* CoreDataCommunicator.h */,
+				3FDE3DDF1535E1F5005E4EC3 /* CoreDataCommunicator.m */,
+				3FB63BB91535EB40005EFD96 /* CustomCell.h */,
+				3FB63BBA1535EB40005EFD96 /* CustomCell.m */,
+				3FDE3DDB1535E187005E4EC3 /* RootTableViewController.h */,
+				3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */,
+				3FDE3DE51535E5C8005E4EC3 /* PlayerViewController.h */,
+				3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */,
+				3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */,
+				3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */,
+				3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */,
+				3FB63BD9153601C0005EFD96 /* tableViewCell.png */,
+				3FDE3DE81535E718005E4EC3 /* Player.h */,
+				3FDE3DE91535E718005E4EC3 /* Player.m */,
 				3FDE3DCB1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld */,
 				3FDE3DC01535DE70005E4EC3 /* Supporting Files */,
 			);
@@ -148,6 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDE3DC41535DE70005E4EC3 /* InfoPlist.strings in Resources */,
+				3FDE3DE31535E55C005E4EC3 /* tableViewBackground.png in Resources */,
+				3FDE3DE41535E55C005E4EC3 /* tableViewBackground@2x.png in Resources */,
+				3FB63BDA153601C0005EFD96 /* tableViewCell@2x.png in Resources */,
+				3FB63BDB153601C0005EFD96 /* tableViewCell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +202,11 @@
 				3FDE3DC61535DE70005E4EC3 /* main.m in Sources */,
 				3FDE3DCA1535DE70005E4EC3 /* AppDelegate.m in Sources */,
 				3FDE3DCD1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld in Sources */,
+				3FDE3DDD1535E187005E4EC3 /* RootTableViewController.m in Sources */,
+				3FDE3DE01535E1F5005E4EC3 /* CoreDataCommunicator.m in Sources */,
+				3FDE3DE71535E5C8005E4EC3 /* PlayerViewController.m in Sources */,
+				3FDE3DEA1535E718005E4EC3 /* Player.m in Sources */,
+				3FB63BBB1535EB40005EFD96 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +310,7 @@
 				3FDE3DD21535DE70005E4EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -3,8 +3,9 @@
     <entity name="Player" representedClassName="Player" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="seq" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Player" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Player" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>

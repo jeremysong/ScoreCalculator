@@ -7,12 +7,20 @@
 //
 
 #import "RootTableViewController.h"
+#import "AppDelegate.h"
+#import "CoreDataCommunicator.h"
+#import "CustomCell.h"
+#import "Player.h"
+#import <QuartzCore/CALayer.h>
 
 @interface RootTableViewController ()
 
 @end
 
 @implementation RootTableViewController
+
+@synthesize managedObjectContext;
+@synthesize playerArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +40,37 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self setTitle:@"Score Board"];
+    
+    // Navigation Bar
+    UIBarButtonItem *addNewPlayerButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPlayer)];
+    self.navigationItem.rightBarButtonItem = addNewPlayerButton;
+    [self.navigationController.navigationBar setTintColor:[UIColor darkGrayColor]];
+    [self.navigationController.navigationBar.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [self.navigationController.navigationBar.layer setShadowOffset:CGSizeMake(1.0f, 1.0f)];
+    [self.navigationController.navigationBar.layer setShadowRadius:3.0f];
+    [self.navigationController.navigationBar.layer setShadowOpacity:1.0f];
+    
+    
+    
+    // TableView
+    [self.tableView setRowHeight:96];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//    [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackground.png"]]];
+    [self.tableView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+    [self.tableView.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [self.tableView.layer setShadowOffset:CGSizeMake(1.0f, 1.0f)];
+    [self.tableView.layer setShadowRadius:3.0f];
+    [self.tableView.layer setShadowOpacity:1.0f];
+    
+    // CoreData
+    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    managedObjectContext = [appdelegate managedObjectContext];
+    [playerArray removeAllObjects];
+    playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:NO andContext:managedObjectContext];
+    
+//    [self.tableView reloadData];
 }
 
 - (void)viewDidUnload
@@ -50,24 +89,52 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [playerArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"PlayerCell";
+    CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
+    Player *currentPlayer = [playerArray objectAtIndex:indexPath.row];
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+    UILabel *scoreLabel = (UILabel *)[cell viewWithTag:2];
+    
+//    UIFont *nameFont = [UIFont fontWithName:@"AmericanTypewriter" size:22];
+    
+    [nameLabel setFont:[UIFont systemFontOfSize:24]];
+    [scoreLabel setFont:[UIFont systemFontOfSize:24]];
+    
+    [nameLabel setTextColor:[UIColor colorWithRed:0.85 green:0.75 blue:0.45 alpha:1]];
+    [scoreLabel setTextColor:[UIColor colorWithRed:0.85 green:0.75 blue:0.45 alpha:1]];
+    
+    [nameLabel setText:[currentPlayer name]];
+    [scoreLabel setText:[[currentPlayer score] stringValue]];
+    
+    [nameLabel setShadowColor:[UIColor blackColor]];
+    [scoreLabel setShadowColor:[UIColor blackColor]];
+    
+    [nameLabel setShadowOffset:CGSizeMake(0.8, 1.8)];
+    [scoreLabel setShadowOffset:CGSizeMake(0.8, 1.8)];
+    
+    [cell.contentView.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [cell.contentView.layer setShadowOffset:CGSizeMake(2.0f, 0.0f)];
+    [cell.contentView.layer setShadowOpacity:3.0f];
+    [cell.contentView.layer setShadowOpacity:1.0f];
+    
+//    [cell.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewCellwood.png"]]];
     
     return cell;
 }
@@ -122,6 +189,11 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(void)addNewPlayer
+{
+    
 }
 
 @end

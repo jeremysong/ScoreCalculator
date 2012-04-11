@@ -30,13 +30,14 @@
     RootTableViewController *rootView = [[RootTableViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:rootView];
     self.window.rootViewController = self.navigationController;
-    
-    Player *newPlayer = (Player *)[NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:__managedObjectContext];
-    newPlayer.score = 0;
-    newPlayer.name = @"Test Player";
-    
-    NSError *saveError;
-    [__managedObjectContext save:&saveError];
+//    
+//    Player *newPlayer = (Player *)[NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:self.managedObjectContext];
+//    newPlayer.score = [[NSDecimalNumber alloc] initWithInteger:0];
+//    newPlayer.name = @"Test Player";
+//    newPlayer.seq = 0;
+//    
+//    NSError *saveError;
+//    [__managedObjectContext save:&saveError];
     
     
     return YES;
