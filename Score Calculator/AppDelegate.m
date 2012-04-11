@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTableViewController.h"
+
+#import "Player.h"
+#import "CoreDataCommunicator.h"
 
 @implementation AppDelegate
 
@@ -14,6 +18,7 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,6 +26,19 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    RootTableViewController *rootView = [[RootTableViewController alloc] init];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:rootView];
+    self.window.rootViewController = self.navigationController;
+    
+    Player *newPlayer = (Player *)[NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:__managedObjectContext];
+    newPlayer.score = 0;
+    newPlayer.name = @"Test Player";
+    
+    NSError *saveError;
+    [__managedObjectContext save:&saveError];
+    
+    
     return YES;
 }
 
