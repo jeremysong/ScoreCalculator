@@ -8,6 +8,10 @@
 
 #import "CustomCell.h"
 
+@interface CustomCell ()
+
+@end
+
 @implementation CustomCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
