@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootTableViewController : UITableViewController
+@interface RootTableViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *playerArray;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) UITextField *nameField;
 
 -(void)addNewPlayer;
+-(void)clearAllScore;
 
 @end

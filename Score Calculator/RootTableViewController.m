@@ -12,6 +12,7 @@
 #import "CustomCell.h"
 #import "Player.h"
 #import <QuartzCore/CALayer.h>
+#import "PlayerViewController.h"
 
 @interface RootTableViewController ()
 
@@ -21,6 +22,7 @@
 
 @synthesize managedObjectContext;
 @synthesize playerArray;
+@synthesize nameField;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +47,10 @@
     
     // Navigation Bar
     UIBarButtonItem *addNewPlayerButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPlayer)];
+    UIBarButtonItem *clearScore = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(clearAllScore)];
+//    [clearScore setEnabled:false];
     self.navigationItem.rightBarButtonItem = addNewPlayerButton;
+    self.navigationItem.leftBarButtonItem = clearScore;
     [self.navigationController.navigationBar setTintColor:[UIColor darkGrayColor]];
     [self.navigationController.navigationBar.layer setShadowColor:[[UIColor blackColor] CGColor]];
     [self.navigationController.navigationBar.layer setShadowOffset:CGSizeMake(1.0f, 1.0f)];
@@ -69,6 +74,11 @@
     managedObjectContext = [appdelegate managedObjectContext];
     [playerArray removeAllObjects];
     playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:NO andContext:managedObjectContext];
+    if ([playerArray count] == 0) {
+        [clearScore setEnabled:false];
+    } else {
+        [clearScore setEnabled:true];
+    }
     
 //    [self.tableView reloadData];
 }
@@ -148,19 +158,28 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [self.managedObjectContext deleteObject:[playerArray objectAtIndex:indexPath.row]];
+        [playerArray removeObject:[playerArray objectAtIndex:indexPath.row]];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+         NSError *saveError;
+        [self.managedObjectContext save:&saveError];
+        if ([playerArray count] == 0) {
+            [self.navigationItem.leftBarButtonItem setEnabled:false];
+        } else {
+            [self.navigationItem.leftBarButtonItem setEnabled:true];
+        }
     }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//    else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+//    }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -183,17 +202,83 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    
+    PlayerViewController *detailViewController = [[PlayerViewController alloc] initWithNibName:nil bundle:nil];
+    [detailViewController setSelectedPlayer:[playerArray objectAtIndex:indexPath.row]];
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+     
 }
 
+#define newPlayerAlert 1
+#define clearAllScoreAlert 2
 -(void)addNewPlayer
 {
+    int index = 0;
+    for (index = 0; index < [playerArray count]; index++) {
+        [[playerArray objectAtIndex:index] setSeq:[NSNumber numberWithInt:index]];
+    }
     
+    UIAlertView *newPlayerNameDialog = [[UIAlertView alloc] initWithTitle:@"Add New Player Name" message:@" " delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    
+    nameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 45, 245, 25)];
+    [nameField setDelegate:self];
+    [nameField setBackgroundColor:[UIColor whiteColor]];
+    [nameField becomeFirstResponder];
+    [nameField setKeyboardAppearance:UIKeyboardAppearanceAlert];
+    [nameField setAutocorrectionType:UITextAutocorrectionTypeNo];
+    
+    [newPlayerNameDialog addSubview:nameField];
+    [newPlayerNameDialog setTransform:CGAffineTransformMakeTranslation(0,10)];
+    [newPlayerNameDialog setTag:newPlayerAlert];
+    [newPlayerNameDialog show];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == newPlayerAlert) {
+        if (buttonIndex == 1) {
+            //OK Button clicked
+            Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:self.managedObjectContext];
+            [newPlayer setName:[nameField text]];
+            [newPlayer setScore:[[NSDecimalNumber alloc] initWithInt:0]];
+            //Reorgnized all seq number
+            if ([playerArray count] != 0) {
+                if ([[[playerArray objectAtIndex:[playerArray count]-1] seq] intValue] != [playerArray count]-1) {
+                    for (int index=0; index < [playerArray count]-1; index++) {
+                        [[playerArray objectAtIndex:index] setSeq:[[NSNumber alloc] initWithInt:index]];
+                    }
+                }
+                
+            }
+            [newPlayer setSeq:[[NSNumber alloc] initWithInt:[playerArray count]]];
+            NSError *saveError;
+            [self.managedObjectContext save:&saveError];
+            
+            [playerArray addObject:newPlayer];
+            [self.navigationItem.leftBarButtonItem setEnabled:true];
+            [self.tableView reloadData];
+        }
+    } else if (alertView.tag == clearAllScoreAlert) {
+        if (buttonIndex == 1) {
+            for (int index = 0; index < [playerArray count]-1; index++) {
+                [[playerArray objectAtIndex:index] setScore:[[NSDecimalNumber alloc] initWithInt:0]];
+            }
+        }
+        NSError * saveError;
+        [self.managedObjectContext save:&saveError];
+        
+        [self.tableView reloadData];
+    }
+}
+
+-(void)clearAllScore
+{
+    UIAlertView *clearAllScore = [[UIAlertView alloc] initWithTitle:@"Are you sure to clear all the scores?" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [clearAllScore setTag:clearAllScoreAlert];
+    [clearAllScore show];
 }
 
 @end

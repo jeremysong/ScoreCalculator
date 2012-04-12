@@ -10,9 +10,6 @@
 #import "Player.h"
 
 @interface PlayerViewController : UIViewController
-{
-    int nextSeq;
-}
 
 @property(nonatomic,strong) Player *selectedPlayer;
 
