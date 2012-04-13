@@ -11,6 +11,10 @@
 
 @interface PlayerViewController : UIViewController
 
-@property(nonatomic,strong) Player *selectedPlayer;
+@property(nonatomic, strong) Player *selectedPlayer;
+@property(nonatomic, strong) UILabel *equation;
+@property(nonatomic, strong) UILabel *result;
+
+-(void)arithmetic:(id)sender;
 
 @end

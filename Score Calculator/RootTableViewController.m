@@ -42,6 +42,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
     
     [self setTitle:@"Score Board"];
     
@@ -60,7 +61,7 @@
     
     
     // TableView
-    [self.tableView setRowHeight:96];
+    [self.tableView setRowHeight:54];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 //    [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewBackground.png"]]];
     [self.tableView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
@@ -228,6 +229,7 @@
     [nameField becomeFirstResponder];
     [nameField setKeyboardAppearance:UIKeyboardAppearanceAlert];
     [nameField setAutocorrectionType:UITextAutocorrectionTypeNo];
+    [nameField setBorderStyle:UITextBorderStyleRoundedRect];
     
     [newPlayerNameDialog addSubview:nameField];
     [newPlayerNameDialog setTransform:CGAffineTransformMakeTranslation(0,10)];

@@ -19,9 +19,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        CGRect cellFrame = CGRectMake(0, 0, 320, 96);
-        CGRect titleFrame = CGRectMake(20, 5, 200, 90);
-        CGRect scoreFrame = CGRectMake(230, 5, 70, 90);
+        CGRect cellFrame = CGRectMake(0, 0, 320, 54);
+        CGRect titleFrame = CGRectMake(20, 0, 200, 54);
+        CGRect scoreFrame = CGRectMake(230, 0, 70, 54);
         
         [self setFrame:cellFrame];
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleFrame];
@@ -37,7 +37,7 @@
         [self addSubview:titleLabel];
         [self addSubview:scoreLabel];
         
-        [self.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tableViewCell.png"]]];
+        [self.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tableCell.png"]]];
 
     }
     return self;
