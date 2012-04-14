@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 
-@interface PlayerViewController : UIViewController
+@interface PlayerViewController : UIViewController <UIAlertViewDelegate>
 
 @property(nonatomic, strong) Player *selectedPlayer;
 @property(nonatomic, strong) UILabel *equation;
 @property(nonatomic, strong) UILabel *result;
+@property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property(nonatomic, strong) NSMutableArray *playerArray;
 
 -(void)arithmetic:(id)sender;
+-(void)winAlert;
 
 @end

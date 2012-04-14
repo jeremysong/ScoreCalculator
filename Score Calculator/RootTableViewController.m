@@ -44,7 +44,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
     
-    [self setTitle:@"Score Board"];
+    [self setTitle:NSLocalizedString(@"Scoreboard", nil)];
     
     // Navigation Bar
     UIBarButtonItem *addNewPlayerButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPlayer)];
@@ -91,6 +91,12 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -128,17 +134,17 @@
     [nameLabel setFont:[UIFont systemFontOfSize:24]];
     [scoreLabel setFont:[UIFont systemFontOfSize:24]];
     
-    [nameLabel setTextColor:[UIColor colorWithRed:0.85 green:0.75 blue:0.45 alpha:1]];
-    [scoreLabel setTextColor:[UIColor colorWithRed:0.85 green:0.75 blue:0.45 alpha:1]];
+    [nameLabel setTextColor:[UIColor blackColor]];
+    [scoreLabel setTextColor:[UIColor blackColor]];
     
     [nameLabel setText:[currentPlayer name]];
     [scoreLabel setText:[[currentPlayer score] stringValue]];
     
-    [nameLabel setShadowColor:[UIColor blackColor]];
-    [scoreLabel setShadowColor:[UIColor blackColor]];
+    [nameLabel setShadowColor:[UIColor whiteColor]];
+    [scoreLabel setShadowColor:[UIColor whiteColor]];
     
-    [nameLabel setShadowOffset:CGSizeMake(0.8, 1.8)];
-    [scoreLabel setShadowOffset:CGSizeMake(0.8, 1.8)];
+    [nameLabel setShadowOffset:CGSizeMake(0.8, 0.8)];
+    [scoreLabel setShadowOffset:CGSizeMake(0.8, 0.8)];
     
     [cell.contentView.layer setShadowColor:[[UIColor blackColor] CGColor]];
     [cell.contentView.layer setShadowOffset:CGSizeMake(2.0f, 0.0f)];
@@ -221,7 +227,7 @@
         [[playerArray objectAtIndex:index] setSeq:[NSNumber numberWithInt:index]];
     }
     
-    UIAlertView *newPlayerNameDialog = [[UIAlertView alloc] initWithTitle:@"Add New Player Name" message:@" " delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    UIAlertView *newPlayerNameDialog = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Add New Player Name", nil) message:@" " delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
     
     nameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 45, 245, 25)];
     [nameField setDelegate:self];
@@ -245,11 +251,11 @@
             //OK Button clicked
             Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:self.managedObjectContext];
             [newPlayer setName:[nameField text]];
-            [newPlayer setScore:[[NSDecimalNumber alloc] initWithInt:0]];
+            [newPlayer setScore:[[NSNumber alloc] initWithInt:0]];
             //Reorgnized all seq number
             if ([playerArray count] != 0) {
                 if ([[[playerArray objectAtIndex:[playerArray count]-1] seq] intValue] != [playerArray count]-1) {
-                    for (int index=0; index < [playerArray count]-1; index++) {
+                    for (int index=0; index < [playerArray count]; index++) {
                         [[playerArray objectAtIndex:index] setSeq:[[NSNumber alloc] initWithInt:index]];
                     }
                 }
@@ -265,7 +271,7 @@
         }
     } else if (alertView.tag == clearAllScoreAlert) {
         if (buttonIndex == 1) {
-            for (int index = 0; index < [playerArray count]-1; index++) {
+            for (int index = 0; index < [playerArray count]; index++) {
                 [[playerArray objectAtIndex:index] setScore:[[NSDecimalNumber alloc] initWithInt:0]];
             }
         }
@@ -278,7 +284,7 @@
 
 -(void)clearAllScore
 {
-    UIAlertView *clearAllScore = [[UIAlertView alloc] initWithTitle:@"Are you sure to clear all the scores?" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    UIAlertView *clearAllScore = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Are you sure to clear all the scores?", nil) message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
     [clearAllScore setTag:clearAllScoreAlert];
     [clearAllScore show];
 }

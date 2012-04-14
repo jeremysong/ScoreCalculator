@@ -20,8 +20,8 @@
     if (self) {
         // Initialization code
         CGRect cellFrame = CGRectMake(0, 0, 320, 54);
-        CGRect titleFrame = CGRectMake(20, 0, 200, 54);
-        CGRect scoreFrame = CGRectMake(230, 0, 70, 54);
+        CGRect titleFrame = CGRectMake(20, 0, 170, 54);
+        CGRect scoreFrame = CGRectMake(200, 0, 100, 54);
         
         [self setFrame:cellFrame];
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleFrame];
@@ -30,6 +30,9 @@
         [titleLabel setBackgroundColor:[UIColor clearColor]];
         [scoreLabel setBackgroundColor:[UIColor clearColor]];
         [self setBackgroundColor:[UIColor clearColor]];
+        
+        [titleLabel setTextAlignment:UITextAlignmentLeft];
+        [scoreLabel setTextAlignment:UITextAlignmentRight];
         
         [titleLabel setTag:1];
         [scoreLabel setTag:2];
