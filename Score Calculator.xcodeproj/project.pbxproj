@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F283E6D153951890076743C /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F283E6C153951890076743C /* icon57.png */; };
-		3F283E6F1539518F0076743C /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F283E6E1539518F0076743C /* icon114.png */; };
+		3F4DE7681539DA1000CA8DEA /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4DE7671539DA1000CA8DEA /* icon114.png */; };
 		3FB63BBB1535EB40005EFD96 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB63BBA1535EB40005EFD96 /* CustomCell.m */; };
 		3FB63BEA1538549A005EFD96 /* showresult.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BE81538549A005EFD96 /* showresult.png */; };
 		3FB63BEB1538549A005EFD96 /* showresult@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BE91538549A005EFD96 /* showresult@2x.png */; };
@@ -42,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3F283E6C153951890076743C /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
-		3F283E6E1539518F0076743C /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
+		3F4DE7671539DA1000CA8DEA /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		3FB63BB91535EB40005EFD96 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		3FB63BBA1535EB40005EFD96 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		3FB63BE81538549A005EFD96 /* showresult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showresult.png; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		3FB63C1515394286005EFD96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3FB63C1C153948D0005EFD96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3FB63C1E153948DB005EFD96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		3FDE3DB31535DE70005E4EC3 /* Score Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDE3DB31535DE70005E4EC3 /* Quick Scoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Scoreboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE3DB71535DE70005E4EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FDE3DB91535DE70005E4EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FDE3DBB1535DE70005E4EC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,7 +103,7 @@
 		3FDE3DA81535DE6F005E4EC3 = {
 			isa = PBXGroup;
 			children = (
-				3F283E6E1539518F0076743C /* icon114.png */,
+				3F4DE7671539DA1000CA8DEA /* icon114.png */,
 				3F283E6C153951890076743C /* icon57.png */,
 				3FDE3DBF1535DE70005E4EC3 /* Score Calculator */,
 				3FDE3DB61535DE70005E4EC3 /* Frameworks */,
@@ -114,7 +114,7 @@
 		3FDE3DB41535DE70005E4EC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FDE3DB31535DE70005E4EC3 /* Score Calculator.app */,
+				3FDE3DB31535DE70005E4EC3 /* Quick Scoreboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			);
 			name = "Score Calculator";
 			productName = "Score Calculator";
-			productReference = 3FDE3DB31535DE70005E4EC3 /* Score Calculator.app */;
+			productReference = 3FDE3DB31535DE70005E4EC3 /* Quick Scoreboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 				3FB63C0B153881A9005EFD96 /* redButton.png in Resources */,
 				3FB63C1D153948D0005EFD96 /* Localizable.strings in Resources */,
 				3F283E6D153951890076743C /* icon57.png in Resources */,
-				3F283E6F1539518F0076743C /* icon114.png in Resources */,
+				3F4DE7681539DA1000CA8DEA /* icon114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
