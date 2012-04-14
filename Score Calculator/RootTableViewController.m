@@ -74,7 +74,7 @@
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     managedObjectContext = [appdelegate managedObjectContext];
     [playerArray removeAllObjects];
-    playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:NO andContext:managedObjectContext];
+    playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:YES andContext:managedObjectContext];
     if ([playerArray count] == 0) {
         [clearScore setEnabled:false];
     } else {

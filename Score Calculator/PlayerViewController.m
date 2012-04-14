@@ -338,7 +338,7 @@
 -(void)winAlert
 {
     [playerArray removeAllObjects];
-    playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:NO andContext:managedObjectContext];    
+    playerArray = [CoreDataCommunicator searchObjectsForEntity:@"Player" withPredicate:nil andSortKey:@"seq" andSortAscending:YES andContext:managedObjectContext];    
     
     //if only one player, you cannot claim other player's score.
     if ([playerArray count] == 1) {
