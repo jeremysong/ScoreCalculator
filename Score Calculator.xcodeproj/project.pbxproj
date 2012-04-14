@@ -343,6 +343,7 @@
 		3FDE3DD11535DE70005E4EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Calculator/Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Score Calculator/Score Calculator-Info.plist";
@@ -355,6 +356,7 @@
 		3FDE3DD21535DE70005E4EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Calculator/Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Score Calculator/Score Calculator-Info.plist";
