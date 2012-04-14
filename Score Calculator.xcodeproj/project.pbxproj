@@ -7,38 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F283E6D153951890076743C /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F283E6C153951890076743C /* icon57.png */; };
+		3F283E6F1539518F0076743C /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F283E6E1539518F0076743C /* icon114.png */; };
 		3FB63BBB1535EB40005EFD96 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB63BBA1535EB40005EFD96 /* CustomCell.m */; };
-		3FB63BDA153601C0005EFD96 /* tableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */; };
-		3FB63BDB153601C0005EFD96 /* tableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BD9153601C0005EFD96 /* tableViewCell.png */; };
+		3FB63BEA1538549A005EFD96 /* showresult.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BE81538549A005EFD96 /* showresult.png */; };
+		3FB63BEB1538549A005EFD96 /* showresult@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BE91538549A005EFD96 /* showresult@2x.png */; };
+		3FB63BEE15385599005EFD96 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BEC15385599005EFD96 /* background@2x.png */; };
+		3FB63BEF15385599005EFD96 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BED15385599005EFD96 /* background.png */; };
+		3FB63BF615385BF7005EFD96 /* tableCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BF415385BF6005EFD96 /* tableCell@2x.png */; };
+		3FB63BF715385BF7005EFD96 /* tableCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BF515385BF6005EFD96 /* tableCell.png */; };
+		3FB63C0215388004005EFD96 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFA15388003005EFD96 /* orangeButton@2x.png */; };
+		3FB63C0315388004005EFD96 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFB15388003005EFD96 /* orangeButton.png */; };
+		3FB63C0415388004005EFD96 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFC15388003005EFD96 /* greenButton.png */; };
+		3FB63C0515388004005EFD96 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFD15388003005EFD96 /* greenButton@2x.png */; };
+		3FB63C0615388004005EFD96 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFE15388003005EFD96 /* blueButton.png */; };
+		3FB63C0715388004005EFD96 /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63BFF15388004005EFD96 /* blueButton@2x.png */; };
+		3FB63C0A153881A9005EFD96 /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63C08153881A9005EFD96 /* redButton@2x.png */; };
+		3FB63C0B153881A9005EFD96 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63C09153881A9005EFD96 /* redButton.png */; };
+		3FB63C0E15389684005EFD96 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB63C0D15389684005EFD96 /* Player.m */; };
+		3FB63C121539427F005EFD96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63C141539427F005EFD96 /* InfoPlist.strings */; };
+		3FB63C1D153948D0005EFD96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FB63C1B153948D0005EFD96 /* Localizable.strings */; };
 		3FDE3DB81535DE70005E4EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DB71535DE70005E4EC3 /* UIKit.framework */; };
 		3FDE3DBA1535DE70005E4EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DB91535DE70005E4EC3 /* Foundation.framework */; };
 		3FDE3DBC1535DE70005E4EC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DBB1535DE70005E4EC3 /* CoreGraphics.framework */; };
 		3FDE3DBE1535DE70005E4EC3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE3DBD1535DE70005E4EC3 /* CoreData.framework */; };
-		3FDE3DC41535DE70005E4EC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE3DC21535DE70005E4EC3 /* InfoPlist.strings */; };
 		3FDE3DC61535DE70005E4EC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DC51535DE70005E4EC3 /* main.m */; };
 		3FDE3DCA1535DE70005E4EC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DC91535DE70005E4EC3 /* AppDelegate.m */; };
 		3FDE3DCD1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DCB1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld */; };
 		3FDE3DDD1535E187005E4EC3 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */; };
 		3FDE3DE01535E1F5005E4EC3 /* CoreDataCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DDF1535E1F5005E4EC3 /* CoreDataCommunicator.m */; };
-		3FDE3DE31535E55C005E4EC3 /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */; };
 		3FDE3DE41535E55C005E4EC3 /* tableViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */; };
 		3FDE3DE71535E5C8005E4EC3 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */; };
-		3FDE3DEA1535E718005E4EC3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE3DE91535E718005E4EC3 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F283E6C153951890076743C /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		3F283E6E1539518F0076743C /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		3FB63BB91535EB40005EFD96 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		3FB63BBA1535EB40005EFD96 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewCell@2x.png"; sourceTree = "<group>"; };
-		3FB63BD9153601C0005EFD96 /* tableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewCell.png; sourceTree = "<group>"; };
+		3FB63BE81538549A005EFD96 /* showresult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showresult.png; sourceTree = "<group>"; };
+		3FB63BE91538549A005EFD96 /* showresult@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "showresult@2x.png"; sourceTree = "<group>"; };
+		3FB63BEC15385599005EFD96 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		3FB63BED15385599005EFD96 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3FB63BF415385BF6005EFD96 /* tableCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableCell@2x.png"; sourceTree = "<group>"; };
+		3FB63BF515385BF6005EFD96 /* tableCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableCell.png; sourceTree = "<group>"; };
+		3FB63BFA15388003005EFD96 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
+		3FB63BFB15388003005EFD96 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
+		3FB63BFC15388003005EFD96 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		3FB63BFD15388003005EFD96 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		3FB63BFE15388003005EFD96 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
+		3FB63BFF15388004005EFD96 /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
+		3FB63C08153881A9005EFD96 /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
+		3FB63C09153881A9005EFD96 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		3FB63C0C15389684005EFD96 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3FB63C0D15389684005EFD96 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		3FB63C131539427F005EFD96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FB63C1515394286005EFD96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3FB63C1C153948D0005EFD96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3FB63C1E153948DB005EFD96 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3FDE3DB31535DE70005E4EC3 /* Score Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE3DB71535DE70005E4EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FDE3DB91535DE70005E4EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FDE3DBB1535DE70005E4EC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3FDE3DBD1535DE70005E4EC3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FDE3DC11535DE70005E4EC3 /* Score Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Score Calculator-Info.plist"; sourceTree = "<group>"; };
-		3FDE3DC31535DE70005E4EC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3FDE3DC51535DE70005E4EC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FDE3DC51535DE70005E4EC3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FDE3DC71535DE70005E4EC3 /* Score Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Score Calculator-Prefix.pch"; sourceTree = "<group>"; };
 		3FDE3DC81535DE70005E4EC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FDE3DC91535DE70005E4EC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,12 +80,9 @@
 		3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		3FDE3DDE1535E1F5005E4EC3 /* CoreDataCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataCommunicator.h; sourceTree = "<group>"; };
 		3FDE3DDF1535E1F5005E4EC3 /* CoreDataCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataCommunicator.m; sourceTree = "<group>"; };
-		3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
 		3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBackground@2x.png"; sourceTree = "<group>"; };
 		3FDE3DE51535E5C8005E4EC3 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
-		3FDE3DE81535E718005E4EC3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		3FDE3DE91535E718005E4EC3 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +103,8 @@
 		3FDE3DA81535DE6F005E4EC3 = {
 			isa = PBXGroup;
 			children = (
+				3F283E6E1539518F0076743C /* icon114.png */,
+				3F283E6C153951890076743C /* icon57.png */,
 				3FDE3DBF1535DE70005E4EC3 /* Score Calculator */,
 				3FDE3DB61535DE70005E4EC3 /* Frameworks */,
 				3FDE3DB41535DE70005E4EC3 /* Products */,
@@ -111,12 +143,23 @@
 				3FDE3DDC1535E187005E4EC3 /* RootTableViewController.m */,
 				3FDE3DE51535E5C8005E4EC3 /* PlayerViewController.h */,
 				3FDE3DE61535E5C8005E4EC3 /* PlayerViewController.m */,
-				3FDE3DE11535E55C005E4EC3 /* tableViewBackground.png */,
 				3FDE3DE21535E55C005E4EC3 /* tableViewBackground@2x.png */,
-				3FB63BD8153601C0005EFD96 /* tableViewCell@2x.png */,
-				3FB63BD9153601C0005EFD96 /* tableViewCell.png */,
-				3FDE3DE81535E718005E4EC3 /* Player.h */,
-				3FDE3DE91535E718005E4EC3 /* Player.m */,
+				3FB63BF415385BF6005EFD96 /* tableCell@2x.png */,
+				3FB63BF515385BF6005EFD96 /* tableCell.png */,
+				3FB63BEC15385599005EFD96 /* background@2x.png */,
+				3FB63BED15385599005EFD96 /* background.png */,
+				3FB63BE81538549A005EFD96 /* showresult.png */,
+				3FB63BE91538549A005EFD96 /* showresult@2x.png */,
+				3FB63BFA15388003005EFD96 /* orangeButton@2x.png */,
+				3FB63BFB15388003005EFD96 /* orangeButton.png */,
+				3FB63BFC15388003005EFD96 /* greenButton.png */,
+				3FB63BFD15388003005EFD96 /* greenButton@2x.png */,
+				3FB63BFE15388003005EFD96 /* blueButton.png */,
+				3FB63BFF15388004005EFD96 /* blueButton@2x.png */,
+				3FB63C08153881A9005EFD96 /* redButton@2x.png */,
+				3FB63C09153881A9005EFD96 /* redButton.png */,
+				3FB63C0C15389684005EFD96 /* Player.h */,
+				3FB63C0D15389684005EFD96 /* Player.m */,
 				3FDE3DCB1535DE70005E4EC3 /* Score_Calculator.xcdatamodeld */,
 				3FDE3DC01535DE70005E4EC3 /* Supporting Files */,
 			);
@@ -127,7 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				3FDE3DC11535DE70005E4EC3 /* Score Calculator-Info.plist */,
-				3FDE3DC21535DE70005E4EC3 /* InfoPlist.strings */,
+				3FB63C1B153948D0005EFD96 /* Localizable.strings */,
+				3FB63C141539427F005EFD96 /* InfoPlist.strings */,
 				3FDE3DC51535DE70005E4EC3 /* main.m */,
 				3FDE3DC71535DE70005E4EC3 /* Score Calculator-Prefix.pch */,
 			);
@@ -168,6 +212,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 3FDE3DA81535DE6F005E4EC3;
 			productRefGroup = 3FDE3DB41535DE70005E4EC3 /* Products */;
@@ -184,11 +229,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDE3DC41535DE70005E4EC3 /* InfoPlist.strings in Resources */,
-				3FDE3DE31535E55C005E4EC3 /* tableViewBackground.png in Resources */,
+				3FB63C121539427F005EFD96 /* InfoPlist.strings in Resources */,
 				3FDE3DE41535E55C005E4EC3 /* tableViewBackground@2x.png in Resources */,
-				3FB63BDA153601C0005EFD96 /* tableViewCell@2x.png in Resources */,
-				3FB63BDB153601C0005EFD96 /* tableViewCell.png in Resources */,
+				3FB63BEA1538549A005EFD96 /* showresult.png in Resources */,
+				3FB63BEB1538549A005EFD96 /* showresult@2x.png in Resources */,
+				3FB63BEE15385599005EFD96 /* background@2x.png in Resources */,
+				3FB63BEF15385599005EFD96 /* background.png in Resources */,
+				3FB63BF615385BF7005EFD96 /* tableCell@2x.png in Resources */,
+				3FB63BF715385BF7005EFD96 /* tableCell.png in Resources */,
+				3FB63C0215388004005EFD96 /* orangeButton@2x.png in Resources */,
+				3FB63C0315388004005EFD96 /* orangeButton.png in Resources */,
+				3FB63C0415388004005EFD96 /* greenButton.png in Resources */,
+				3FB63C0515388004005EFD96 /* greenButton@2x.png in Resources */,
+				3FB63C0615388004005EFD96 /* blueButton.png in Resources */,
+				3FB63C0715388004005EFD96 /* blueButton@2x.png in Resources */,
+				3FB63C0A153881A9005EFD96 /* redButton@2x.png in Resources */,
+				3FB63C0B153881A9005EFD96 /* redButton.png in Resources */,
+				3FB63C1D153948D0005EFD96 /* Localizable.strings in Resources */,
+				3F283E6D153951890076743C /* icon57.png in Resources */,
+				3F283E6F1539518F0076743C /* icon114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,20 +264,30 @@
 				3FDE3DDD1535E187005E4EC3 /* RootTableViewController.m in Sources */,
 				3FDE3DE01535E1F5005E4EC3 /* CoreDataCommunicator.m in Sources */,
 				3FDE3DE71535E5C8005E4EC3 /* PlayerViewController.m in Sources */,
-				3FDE3DEA1535E718005E4EC3 /* Player.m in Sources */,
 				3FB63BBB1535EB40005EFD96 /* CustomCell.m in Sources */,
+				3FB63C0E15389684005EFD96 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FDE3DC21535DE70005E4EC3 /* InfoPlist.strings */ = {
+		3FB63C141539427F005EFD96 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3FDE3DC31535DE70005E4EC3 /* en */,
+				3FB63C131539427F005EFD96 /* en */,
+				3FB63C1515394286005EFD96 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FB63C1B153948D0005EFD96 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB63C1C153948D0005EFD96 /* en */,
+				3FB63C1E153948DB005EFD96 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -245,6 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "Quick Scoreboard";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -264,6 +334,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "Quick Scoreboard";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -275,7 +346,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Calculator/Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Score Calculator/Score Calculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "Quick Scoreboard";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -286,7 +358,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Calculator/Score Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Score Calculator/Score Calculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "Quick Scoreboard";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
